@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,97 +47,116 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fchange.cs">
+    <Compile Include="ConnectionString.cs" />
+    <Compile Include="DAO\Account.cs" />
+    <Compile Include="DAO\CustomerDAO.cs" />
+    <Compile Include="DAO\DoanhThuDAO.cs" />
+    <Compile Include="DAO\ExecuteQuery.cs" />
+    <Compile Include="DAO\GuiTienDAO.cs" />
+    <Compile Include="DAO\LoaiSoDAO.cs" />
+    <Compile Include="DAO\RutTienDAO.cs" />
+    <Compile Include="DAO\SoTietKiemDAO.cs" />
+    <Compile Include="DAO\StaffDAO.cs" />
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\Customer.cs" />
+    <Compile Include="DTO\DoanhThu.cs" />
+    <Compile Include="DTO\GoiTien.cs" />
+    <Compile Include="DTO\LoaiSo.cs" />
+    <Compile Include="DTO\LoaiTK.cs" />
+    <Compile Include="DTO\RutTien.cs" />
+    <Compile Include="DTO\SoTietKiem.cs" />
+    <Compile Include="DTO\Staff.cs" />
+    <Compile Include="UI\fchange.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fchange.Designer.cs">
+    <Compile Include="UI\fchange.Designer.cs">
       <DependentUpon>fchange.cs</DependentUpon>
     </Compile>
-    <Compile Include="fcustomer.cs">
+    <Compile Include="UI\fcustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fcustomer.Designer.cs">
+    <Compile Include="UI\fcustomer.Designer.cs">
       <DependentUpon>fcustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="finformation.cs">
+    <Compile Include="UI\finformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="finformation.Designer.cs">
+    <Compile Include="UI\finformation.Designer.cs">
       <DependentUpon>finformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="flogin.cs">
+    <Compile Include="UI\flogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="flogin.Designer.cs">
+    <Compile Include="UI\flogin.Designer.cs">
       <DependentUpon>flogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmanage.cs">
+    <Compile Include="UI\fmanage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmanage.Designer.cs">
+    <Compile Include="UI\fmanage.Designer.cs">
       <DependentUpon>fmanage.cs</DependentUpon>
     </Compile>
-    <Compile Include="fopen.cs">
+    <Compile Include="UI\fopen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fopen.Designer.cs">
+    <Compile Include="UI\fopen.Designer.cs">
       <DependentUpon>fopen.cs</DependentUpon>
     </Compile>
-    <Compile Include="faccount.cs">
+    <Compile Include="UI\faccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="faccount.Designer.cs">
+    <Compile Include="UI\faccount.Designer.cs">
       <DependentUpon>faccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="freport.cs">
+    <Compile Include="UI\freport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="freport.Designer.cs">
+    <Compile Include="UI\freport.Designer.cs">
       <DependentUpon>freport.cs</DependentUpon>
     </Compile>
-    <Compile Include="fstaff.cs">
+    <Compile Include="UI\fstaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fstaff.Designer.cs">
+    <Compile Include="UI\fstaff.Designer.cs">
       <DependentUpon>fstaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="ftransaction.cs">
+    <Compile Include="UI\ftransaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ftransaction.Designer.cs">
+    <Compile Include="UI\ftransaction.Designer.cs">
       <DependentUpon>ftransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="quanly.cs" />
-    <EmbeddedResource Include="faccount.resx">
+    <EmbeddedResource Include="UI\faccount.resx">
       <DependentUpon>faccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fchange.resx">
+    <EmbeddedResource Include="UI\fchange.resx">
       <DependentUpon>fchange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fcustomer.resx">
+    <EmbeddedResource Include="UI\fcustomer.resx">
       <DependentUpon>fcustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="finformation.resx">
+    <EmbeddedResource Include="UI\finformation.resx">
       <DependentUpon>finformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="flogin.resx">
+    <EmbeddedResource Include="UI\flogin.resx">
       <DependentUpon>flogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmanage.resx">
+    <EmbeddedResource Include="UI\fmanage.resx">
       <DependentUpon>fmanage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fopen.resx">
+    <EmbeddedResource Include="UI\fopen.resx">
       <DependentUpon>fopen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="freport.resx">
+    <EmbeddedResource Include="UI\freport.resx">
       <DependentUpon>freport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fstaff.resx">
+    <EmbeddedResource Include="UI\fstaff.resx">
       <DependentUpon>fstaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ftransaction.resx">
+    <EmbeddedResource Include="UI\ftransaction.resx">
       <DependentUpon>ftransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -183,5 +203,6 @@
   <ItemGroup>
     <None Include="Resources\text.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
